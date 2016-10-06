@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Desktop Styles: Styles for desktop screens with very high resolution
+   ========================================================================== */
+@media only screen and (min-width: 1380px){
+	
+}
+
+/* ==========================================================================
+   Desktop Styles: Styles for desktop screens with normal resolution
+   ========================================================================== */
+@media only screen and (min-width: 768px) and (max-width: 1380px){
+	.content-wrap{width: 750px;}
+	.content-wrap h1{margin-top: 20px;}
+	#rosie-adventure h1{background: url('../images/headlines/stepIntoAdventure_tab.png') no-repeat; width: 702px; height: 88px;}
+	#rosie-adventure h3{background: url('../images/headlines/moreToExplore_tab.png') no-repeat; width: 160px; height: 13px;}
+	.content-wrap p.desc{padding: 0 50px; font-size: 17px; margin-top: -10px;}
+	.video-carousel{width: 645px; height: auto; padding-right: 20px;}
+	.video-carousel .placeholder{width: 645px; height: 375px;}
+	.video-carousel iframe{height: 362px; width: 100%; margin: 7px 0;}
+	.flex-control-paging li a{width: 117px; height: 102px;}
+	.flex-control-paging li a p{font-size: 11px; height: 32px;}
+	.flex-control-nav .img-wrap span{height: 38px; font-size: 12px; padding-top: 30px;}
+	.side-nav{top: 30%; right: -20px; width: 72px;}
+	.social-sharing{right: -36px;}
+	.skycom .headline{border: none;}
+}
+
+/* ==========================================================================
+   Tablet Styles: Tablet Styles taking iPad screen resolution as standard
+   ========================================================================== */
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+	.side-nav .d-more{display: none;}
+	.wrapper{background-image: url('../images/bg_tab.jpg');}
+	.content-wrap{padding-bottom: 50px;}
+	.side-nav .win-adventure, .side-nav .win-adventure:hover{width: 72px; height: 64px; background-position: -205px -173px;}
+	.side-nav{top: 40%;}
+	
+	.video-carousel .placeholder .play{background-position: -218px -391px; width: 75px; height: 75px; margin: -37px 0 0 -37px;}
+	.social-sharing{right: -30px; width: 30px; height: 100px;}
+	.social-sharing li{margin: 8px auto;}
+	.social-sharing .email{width: 19px; height: 14px; background-position: -206px -300px;}
+	.social-sharing .fb{width: 10px; height: 19px; background-position: -209px -328px; margin: 17px auto;}
+	.social-sharing .twitter{width: 18px; height: 16px; background-position: -206px -358px;}
+	.social-sharing .email:hover{background-position: -236px -300px;}
+	.social-sharing .fb:hover{background-position: -240px -328px;}
+	.social-sharing .twitter:hover{background-position: -236px -358px;}
+}
+
+
+/* ==========================================================================
+   Phablet Styles: Styles for Phablet devices like Samsung Note Series and iPhone 6Plus
+   ========================================================================== */
+@media only screen and (max-width: 767px){
+	.skycom .headline{border: none;}
+	#rosie-adventure h3, .side-nav{display: none;}
+	.video-carousel .video-desc{display: block; font: 23px skyMedium, Arial; color: #666666; margin: 8px 0; padding-right: 200px;}
+	
+	.fixed .skycom.header{top: -44px;}
+	.fixed .wrapper{margin-top: 90px;}
+	#mobile-extended-nav{display: block; position: relative; height: 50px; width: 100%; border-bottom: 1px solid #dcdcdc;}
+	#mobile-extended-nav .simplenav {position: absolute; left: 0; bottom: 0; border: none; padding: 0 10px;}
+	#mobile-extended-nav .simplenav>* {float: left;}
+	#mobile-extended-nav .simplenav>*:first-child>* {margin-left: 0;}
+	#mobile-extended-nav .simplenav__link--dark,#mobile-extended-nav .simplenav__link--light {display: inline-block; *display: inline; margin: 0.8125em 0.9375em 0.9375em; margin-bottom: 15px; border-bottom: 0.125em solid transparent; line-height: 1;}
+	#mobile-extended-nav .simplenav__link--dark { color: #000;}
+	#mobile-extended-nav .simplenav__link--light {color: #fff;}
+	#mobile-extended-nav .simplenav__link--dark::after,#mobile-extended-nav .simplenav__link--light::after {display: block; content: attr(title); height: 1px; color: transparent; overflow: hidden; visibility: hidden;}
+	#mobile-extended-nav .simplenav__link--dark.is-active,
+	#mobile-extended-nav .simplenav__link--dark:active,
+	#mobile-extended-nav .simplenav__link--dark:focus,
+	#mobile-extended-nav .simplenav__link--dark:hover,
+	#mobile-extended-nav .simplenav__link--light.is-active,
+	#mobile-extended-nav .simplenav__link--light:active,
+	#mobile-extended-nav .simplenav__link--light:focus,
+	#mobile-extended-nav .simplenav__link--light:hover {color: #0070a5; text-decoration: none; border-bottom: 0.125em solid #0070a5;}
+	#mobile-extended-nav .simplenav__link--dark.is-active,
+	#mobile-extended-nav .simplenav__link--dark:active,
+	#mobile-extended-nav .simplenav__link--dark:focus,
+	#mobile-extended-nav .simplenav__link--dark:hover {color: #000; border-color: #000;}
+	#mobile-extended-nav .simplenav__link--light.is-active,
+	#mobile-extended-nav .simplenav__link--light:active,
+	#mobile-extended-nav .simplenav__link--light:focus,
+	#mobile-extended-nav .simplenav__link--light:hover {color: #fff; border-color: #fff;}
+	
+	.content-wrap{width: 98%;}
+	.wrapper{background-image: url('../images/bg_mob.jpg');}
+	#rosie-adventure h1{background: url('../images/headlines/stepIntoAdventure_phab.png') no-repeat; max-width: 612px; height: 99px; margin-top: -6px;}
+	.content-wrap p.desc{padding: 0 10px; font-size: 27px; margin-bottom: 22px;}
+	.video-carousel{width: 100%; background: #fff; border: 10px solid #fff; box-sizing: border-box;}
+	.video-carousel .placeholder{background: url('../images/videoImg/rosieAdventure_phab.jpg') no-repeat; width: 100%; background-size: 100% auto;}
+	.video-carousel iframe{height: 100%; margin: 0;}
+	.video-carousel .placeholder .play{background-position: 0px -301px; width: 140px; height: 140px; margin: -70px 0 0 -70px;}
+	
+	.social-sharing{width: 190px; height: 45px; z-index: 5; right: -2px; bottom: 10px; text-align: right;}
+	.social-sharing li{display: inline-block; vertical-align: bottom; margin: 0;}
+	.social-sharing .email{width: 45px; height: 34px; background-position: 0 -253px;}
+	.social-sharing .fb{width: 24px; height: 47px; background-position: -53px -253px; margin: 0 30px;}
+	.social-sharing .twitter{width: 47px; height: 37px; background-position: -87px -253px;}
+	.social-sharing .email:hover{background-position: -205px -37px;}
+	.social-sharing .fb:hover{background-position: -273px -38px;}
+	.social-sharing .twitter:hover{background-position: -204px -78px;}
+}
+
+/* ==========================================================================
+   Mobile Styles: Styles for Mobile Devices
+   ========================================================================== */
+@media only screen and (max-width: 639px){
+	body{min-width: 320px;}
+	.content-wrap{padding-bottom: 70px;}
+	.video-carousel .video-desc{font-size: 14px; margin: 4px 0; padding-right: 110px;}
+	#rosie-adventure h1{background: url('../images/headlines/stepIntoAdventure_mob.png') no-repeat; max-width: 317px; height: 67px; margin-top: -11px;}
+	.content-wrap p.desc{font-size: 14px; margin: -9px 0 11px;}
+	.video-carousel{border: 5px solid #fff;}
+	.video-carousel .placeholder .play{background-position: -128px -477px; width: 70px; height: 70px; margin: -35px 0 0 -35px;}
+	
+	.social-sharing{width: 100px; height: 25px; bottom: 5px;}
+	.social-sharing .email{width: 23px; height: 17px; background-position: -145px -254px;}
+	.social-sharing .fb{width: 12px; height: 24px; background-position: -185px -254px; margin: 0 15px;}
+	.social-sharing .twitter{width: 24px; height: 19px; background-position: -146px -274px;}
+	.social-sharing .email:hover{background-position: -204px -136px;}
+	.social-sharing .fb:hover{background-position: -242px -136px;}
+	.social-sharing .twitter:hover{background-position: -266px -135px;}
+}
+
+@media only screen and (max-width: 480px){
+	 #mobile-extended-nav .simplenav__link--light{font-size: 14px; margin-right: 5px;}
+}

@@ -1,0 +1,122 @@
+
+/* ==========================================================================
+   Base styles: Default Styles
+   ========================================================================== */
+::-moz-selection {background: #b3d4fc;text-shadow: none;}
+::-webkit-selection {background: #b3d4fc;text-shadow: none;}
+::-o-selection {background: #b3d4fc;text-shadow: none;}
+::selection {background: #b3d4fc;text-shadow: none;}
+hr {display: block;height: 1px;border: 0;border-top: 1px solid #ccc;margin: 1em 0;padding: 0;}	/* A better looking default horizontal rule */
+textarea {resize: vertical;}			/* Allow only vertical resizing of textareas. */
+p,h2,h3 {orphans: 3;widows: 3;}		/* Define the minimal number of words (orphans & widows) that every line should contain. */
+
+/* ==========================================================================
+   Base styles: General Styles
+   ========================================================================== */
+
+.hidden{display: none !important; visibility: hidden;} 	/* Hide from both screenreaders and browsers */
+.visuallyhidden {border: 0;clip: rect(0 0 0 0);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}	/* Hide only visually, but have it available for screenreaders */
+.fadeout{opacity: 0;}									/* Fade Out with opacity 0 */
+.invisible {visibility: hidden;}							/* Hide visually and from screenreaders, but maintain layout */
+
+.fl{float: left;}										/* Float Left */
+.fr{float: right;}										/* Float Right */
+.dib{display: inline-block; vertical-align: top;}		/* Display inline-block with vertical top alignment */
+.tc{text-align: center;}								/* Text align Center */
+
+.ir {font: 0/0 a;text-shadow: none;color: transparent;}	/* SEO friendly Image Replacement style */
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {content: " ";display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
+.browsehappy {margin: 0.2em 0;background: #ccc;color: #000;padding: 0.2em 0;}	/* A pretty Chrome Frame prompt */
+
+@font-face {
+    font-family: 'skyRegular';
+    src: url('fonts/ky_regular.eot.eot');
+}
+@font-face {
+    font-family: 'skyRegular';
+    src: url('fonts/sky_regular.eot?#iefix') format('embedded-opentype'), url('fonts/sky_regular.woff') format('woff'), url('fonts/sky_regular.ttf') format('truetype'), url('fonts/sky_regular.svg#.') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'skyMedium';
+    src: url('fonts/sky_medium.eot');
+}
+@font-face {
+    font-family: 'skyMedium';
+    src: url('fonts/sky_medium.eot?#iefix') format('embedded-opentype'), url('fonts/sky_medium.woff') format('woff'), url('fonts/sky_medium.ttf') format('truetype'), url('fonts/sky_medium.svg#.') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ==========================================================================
+   Page Related custom styles
+   ========================================================================== */
+
+/* Fixed Header */
+.fixed .skycom.header{position: fixed; top: -128px; left: 0; width: 100%; z-index: 99;}
+.fixed .wrapper{margin-top: 176px;}
+#mobile-extended-nav{display: none;}
+
+/* Main Page Structure */
+.wrapper{width: 100%; background: url('../images/bg.jpg') no-repeat; background-position: center top; background-size: cover;}
+.content-wrap{width: 80%; max-width: 950px; margin: 0 auto; padding: 1px 0 150px; position: relative}
+.content-wrap h1{text-align: center; margin: 0; margin: 14px auto 0; text-indent: -9999px; color: #79105d;}
+#rosie-adventure h1{background: url('../images/headlines/stepIntoAdventure.png') no-repeat; width: 936px; height: 105px;}
+.content-wrap p.desc{font: 20px skyRegular, Arial; color: #444444; text-align: center; padding: 0 55px; margin: -3px 0 9px;}
+.sprite{background: url('../images/sprites/XmasSprite.png') no-repeat;}
+
+/* Video Carousel */
+.video-carousel{width: 860px; margin: 0 auto; position: relative;}
+.video-carousel h3{margin: 0 auto 11px; text-align: center; text-indent: -9999px; color: #79105d;}
+#rosie-adventure h3{background: url('../images/headlines/moreToExplore.png') no-repeat; width: 203px; height: 26px;}
+.video-carousel .placeholder{position: relative; background: url('../images/videoImg/rosieAdventure.png') no-repeat; width: 860px; height: 500px; background-size: auto 100%;}
+.video-carousel .placeholder .play{width: 100px; height: 95px; background-position: 0 0; display: block; position: absolute; top: 50%; left: 50%; margin: -47px 0 0 -50px; cursor: pointer;}
+.video-carousel iframe{ z-index: 50; position: relative; height: 486px; background: #000; margin: 7px 0;}
+.video-carousel .video-desc{display: none;}
+
+.flex-control-nav .img-wrap{position: relative;}
+.flex-control-nav .img-wrap span{width: 100%; height: 50px; position: absolute; left: 0; top:0; background: rgba(0,0,0,0.4); opacity: 0; font: 15px skyMedium,Arial; color: #e1e1e1; text-align: center; display: block; z-index: 10; padding-top: 40px;
+	-webkit-transition: 0.2s opacity ease-in-out;
+	-moz-transition: 0.2s opacity ease-in-out;
+	-o-transition: 0.2s opacity ease-in-out;
+	-ms-transition: 0.2s opacity ease-in-out;
+	transition: 0.2s opacity ease-in-out;
+}
+.flex-control-nav li:hover .img-wrap:after, .flex-control-nav li.play .img-wrap:after{opacity: 1;}
+.flex-control-nav li.play .img-wrap span{opacity: 1;}
+
+.social-sharing{position: absolute; width: 40px; height: 130px; right: -40px; bottom: 12px; background: #fff; padding: 0; margin: 0; list-style: none;}
+.social-sharing li{text-align: center; margin: 11px auto; text-align: center; cursor: pointer;}
+.social-sharing li a{display: block; width: 100%; height: 100%; }
+.social-sharing .email{width: 26px; height: 20px; background-position: -103px -79px;}
+.social-sharing .fb{width: 13px; height: 27px; background-position: -143px -72px; margin: 22px auto;}
+.social-sharing .twitter{width: 25px; height: 21px; background-position: -172px -78px;}
+.social-sharing .email:hover{background-position: -205px 0;}
+.social-sharing .fb:hover{background-position: -242px 0;}
+.social-sharing .twitter:hover{background-position: -263px -1px;}
+
+/* Side navigation */
+.side-nav{position: absolute; right: -203px; top: 35%; width: 160px; height: auto;}
+/* 
+	Styles for Fixed Side Nav:
+	.side-nav{position: fixed; right: 5px; top: 45%; width: 160px; height: auto;} 
+*/
+.side-nav .d-more{width: 97px; height: 46px; background-position: -103px 0; margin: 0 7px;}
+.side-nav .win-adventure{width: 160px; height: 50px; background-position: -10px -100px; display: block;}
+.side-nav .win-adventure:hover{background-position: -6px -548px;}

@@ -1,0 +1,100 @@
+/*
+ * jQuery FlexSlider v2.5.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 and later license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ * 
+ */
+
+/* ====================================================================================================================
+ * RESETS
+ * ====================================================================================================================*/
+.flex-container a:hover,
+.flex-slider a:hover,
+.flex-container a:focus,
+.flex-slider a:focus {outline: none;}
+.slides,
+.slides > li,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
+.flex-pauseplay span {text-transform: capitalize;}
+/* ====================================================================================================================
+ * BASE STYLES
+ * ====================================================================================================================*/
+.flexslider {margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;}
+.flexslider .slides img {width: 100%; display: block;}
+.flexslider .slides:after {content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+.no-js .flexslider .slides > li:first-child {display: block;}
+/* ====================================================================================================================
+ * DEFAULT THEME
+ * ====================================================================================================================*/
+.flexslider {margin: 0 0 5px; position: relative; zoom: 1;}
+.flexslider .slides {zoom: 1;}
+.flexslider .slides img {height: auto;}
+.flex-viewport {max-height: 2000px; 
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.loading .flex-viewport {max-height: 300px;}
+.carousel li {margin-right: 5px;}
+.flex-direction-nav a {text-decoration: none; display: none; width: 40px; height: 40px; margin: -20px 0 0; position: absolute; top: 50%; z-index: 10; overflow: hidden; opacity: 0; cursor: pointer; color: rgba(0, 0, 0, 0.8); text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.flex-direction-nav .flex-disabled {opacity: 0!important; filter: alpha(opacity=0); cursor: default;}
+.flex-control-nav {width: 100%; position: relative; text-align: center;}
+.flex-control-nav li {margin: 0; display: inline-block; zoom: 1; vertical-align: top;}
+.flex-control-paging li a {width: 160px; height: 133px; display: block; background: #fff; cursor: pointer; border: 4px solid #fff; margin-right: 5px;}
+.flex-control-paging li:last-child a{margin-right: 0;}
+.flex-control-paging li a img{display: block; width: 100%; height: auto;}
+.flex-control-paging li a p{margin: 0; background-position: -1px -207px; height: 39px; font: 15px skyRegular, Arial; color: #444444; text-align: left; padding: 3px 5px 0;}
+.flex-control-paging li.flex-active a p, .flex-control-paging li:hover a p{background-position: -1px -157px; color: #fff;}
+.flex-control-paging li a:hover {background: #333; background: rgba(0, 0, 0, 0.7);}
+/* ====================================================================================================================
+ * RESPONSIVE
+ * ====================================================================================================================*/
+@media screen and (max-width: 767px){
+	.flex-direction-nav a{background: url('../images/sprites/XmasSprite.png') no-repeat; text-indent: -9999px; z-index: 99; 
+		-webkit-transition: none;
+		-moz-transition: none;
+		-o-transition: none;
+		-ms-transition: none;
+		transition: none;
+	}
+	.flex-direction-nav .flex-prev {display: block; opacity: 1; left: 0;}
+	.flex-direction-nav .flex-next {display: block; opacity: 1; right: -2px;}
+	.flex-control-nav{position: absolute; bottom: -54px;}
+	.flex-control-paging li a:hover, .flex-control-paging li a{background: url('../images/sprites/XmasSprite.png') no-repeat; text-indent: -9999px; overflow: hidden; border: none;}
+	.flex-control-nav .img-wrap{display: none;}
+	.flex-control-paging li a p{display: none;}
+	
+}
+@media screen and (min-width: 640px) and (max-width: 767px) {
+	.flexslider .slides > li{padding-bottom: 65px;}
+	.flex-direction-nav .flex-prev {width: 48px; height: 98px; background-position: -77px -443px; margin-top: -81px;}
+	.flex-direction-nav .flex-next {width: 68px; height: 98px; background-position: 16px -443px; margin-top: -81px;}
+	.flex-control-nav li{margin: 0 14px;}
+	.flex-control-paging li a{width: 24px; height: 24px; background-position: -173px -358px;}
+	.flex-control-paging li a:hover, .flex-control-paging li.flex-active a{background-position: -173px -302px;}
+}
+@media screen and (max-width: 639px){
+	.flexslider .slides > li{padding-bottom: 35px;}
+	.flex-control-nav{bottom: -35px;}
+	.flex-control-nav li{margin: 0 7px;}
+	.flex-direction-nav .flex-prev {width: 30px; height: 45px; background-position: -175px -427px; margin-top: -40px;}
+	.flex-direction-nav .flex-next {width: 30px; height: 45px; background-position: -132px -427px; margin-top: -40px;}
+	.flex-control-paging li a{width: 12px; height: 12px; background-position: -180px -390px;}
+	.flex-control-paging li a:hover, .flex-control-paging li.flex-active a{background-position: -179px -334px;}
+	.flex-control-nav{bottom: -32px;}
+}
